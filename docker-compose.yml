@@ -1,0 +1,10 @@
+version: "3"
+services:
+    backend:
+        build: .
+        working_dir: /var/www/facebook/
+        volumes:
+            - .:/var/www/facebook/
+        command: python manage.py runserver 0.0.0.0:8000
+        ports:
+            - 8000:8000
